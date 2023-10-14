@@ -1,38 +1,149 @@
+
+ /* main color from PIEX blue  #3500E5   */
+ /* secondary color #7AFFDE */
+
+
+
+
+/* Global styles for the entire app */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Capriola', sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin); /* Smaller font size */
+  font-family: 'Capriola', sans-serif;
+  font-weight: bold;
+  color: #3500E5;
+  padding: 20px; /* Add padding around the text */
+  position: relative; /* Set position to relative */
+  text-align: center; /* Align text center */
+}
+
+.App-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7AFFDE; /* Background color */
+  border-radius: 30px; /* Optional: Add border-radius for rounded corners */
+  z-index: -1; /* Send the background behind the text */
+}
+
+
+
+
+
+/* Sidebar styles */
+#sidebar {
+  position: fixed;
+  height: 100%;
+  width: 500px; /* Set the width of the sidebar */
+  left: 0;
+  top: 0;
+background-color: #333; /* Set the background color of the sidebar */
+  padding-top: 20px;
+  background-color:#3500E5
+}
+/* Sidebar list styles */
+#sidebar ul {
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;;
+ 
+}
+
+/* Sidebar list item styles */
+#sidebar ul li {
+  margin-bottom: 20px; /* Add margin between items */
+  color:#fcfcfc;
+  align-items:flex-start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* Sidebar link styles */
+#sidebar ul li a {
   color: white;
+  text-decoration: none;
+  padding: 20px; /* Adjust the padding values to add more space */
+  font-size: 70px;
+  align-items: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+/* Sidebar title styles */
+#sidebar h2 {
+  font-size: 24px; /* Set the font size of the sidebar title */
+  color: white;
+  text-align: center; /* Center align the sidebar title */
+  margin-bottom: 30px; /* Add some bottom margin for spacing */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Sidebar link hover styles */
+#sidebar ul li a:hover {
+  border-radius: 10px;
+  color: #7AFFDE; /* Change the text color on hover */
+}
+.logo {
+  position: absolute;
+  top: 5px; /* Adjust the top position as needed */
+  right: 40px; /* Adjust the right position as needed */
+  width: 100px; /* Set the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
+}
+/* Styles for document buttons */
+.document-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Add these styles to your CSS file */
+.page-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3500E5;
+  border: 1px solid #3500E5;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-button:hover {
+  background-color: #3500E5;
+  border-color: #3500E5;
+}
+/* Add this to your CSS stylesheet */
+.custom-button {
+  background-color: #3500E5; /* Green background color */
+  border: none; /* Remove border */
+  color: white; /* White text color */
+  padding: 15px 32px; /* Padding inside the button */
+  text-align: center; /* Center-align text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make it inline block */
+  font-size: 16px; /* Font size */
+  margin: 10px; /* Add margin around the button */
+  cursor: pointer; /* Add pointer cursor on hover */
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  font-family: 'Capriola', sans-serif;
+}
+
+.custom-button:hover {
+  background-color: #7AFFDE; /* Darker green color on hover */
+  border-color:#3500E5 ;
+
 }
