@@ -7,6 +7,7 @@ function MathematicsPage() {
     <div >
       <img src={logo} alt="Logo" className="logo" />
       <div>Mathematics</div>
+      <div>hello</div>
       {/* Additional content goes here */}
     </div>
   );
