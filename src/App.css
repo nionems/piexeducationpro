@@ -32,7 +32,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #7AFFDE; /* Background color */
+  background-color: #f5f9f8; /* Background color */
   border-radius: 30px; /* Optional: Add border-radius for rounded corners */
   z-index: -1; /* Send the background behind the text */
 }
